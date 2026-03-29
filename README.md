@@ -11,7 +11,7 @@
 1. Установите **Python 3.10+**.
 2. Создайте виртуальное окружение и выполните `pip install -r requirements.txt`.
 3. Скопируйте `.env.example` в `.env`, укажите `API_ID` и `API_HASH` с [my.telegram.org/apps](https://my.telegram.org/apps).
-4. Запустите `python login_telegram.py` (один раз).
+4. Запустите `python login_telegram.py` (один раз, номер вводите в международном формате +(код страны)(номер), без пробелов).
 5. Запустите сервер: `python -m uvicorn app.main:app --host 127.0.0.1 --port 8000`.
 6. Откройте в браузере: `http://127.0.0.1:8000`.
 
