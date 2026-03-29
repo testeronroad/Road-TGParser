@@ -23,7 +23,7 @@
 
 ```bash
 git clone https://github.com/testeronroad/Road-TGParcer.git
-cd roadparcer
+cd Road-TGParcer
 python -m venv .venv
 # Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
