@@ -2,18 +2,6 @@
 
 **Road Soft** · локальный каталог публичных **каналов и супергрупп Telegram**: поиск по ключевым словам, сохранение в **SQLite**, веб-интерфейс (поиск по базе, ручная смена категории, удаление записей), экспорт **CSV** и **Excel**. Стек: **Python 3.10+**, FastAPI, Telethon (MTProto).
 
-*English:* Local web app to search and catalog public Telegram channels and supergroups — SQLite, web UI, categories, CSV/XLSX export. **Python**, FastAPI, Telethon. **Road Soft.**
-
-**Строка для поля *Description* на GitHub** (Настройки репозитория → поле вверху, до ~350 символов):
-
-```text
-Local catalog of public Telegram channels & supergroups — Python, FastAPI, Telethon, SQLite, web UI, CSV/XLSX export. Road Soft.
-```
-
-**Темы (Topics), которые можно добавить на GitHub:** `telegram`, `telethon`, `fastapi`, `sqlite`, `python`, `uvicorn`, `roadparcer`, `channels`.
-
----
-
 ## Быстрый старт
 
 Полная пошаговая инструкция: **[INSTALL.md](INSTALL.md)**.
