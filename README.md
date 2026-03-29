@@ -49,4 +49,4 @@ pip install -r requirements.txt
 
 ## Лицензия
 
-MIT, см. [LICENSE](LICENSE). Авторские права: **Road Soft**.
+MIT, см. [LICENSE](LICENSE). Авторские права: **Testeron**.
