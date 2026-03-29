@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RoadParcer · Road Soft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">◈</span>
+      <div>
+        <h1>RoadParcer</h1>
+        <p class="tagline">Поиск и каталог публичных каналов и супергрупп Telegram · Road Soft</p>
+      </div>
+    </div>
+    <div class="status-pill" id="healthPill" title="Состояние API">
+      <span class="dot" id="healthDot"></span>
+      <span id="healthText">Проверка…</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel parse-panel">
+      <h2>Парсинг по ключевому слову</h2>
+      <p class="hint">Используется глобальный поиск Telegram (MTProto). Нужна авторизация через <code>login_telegram.py</code>.</p>
+      <form id="parseForm" class="parse-form">
+        <input type="text" id="keyword" name="keyword" placeholder="Например: криптовалюта, арбитраж, магазин" required autocomplete="off" />
+        <label class="limit-label">
+          Лимит
+          <input type="number" id="limit" name="limit" value="30" min="1" max="100" />
+        </label>
+        <button type="submit" id="parseBtn">Спарсить</button>
+      </form>
+      <div id="parseMessage" class="message" hidden></div>
+    </section>
+
+    <aside class="panel stats-panel">
+      <h2>Статистика</h2>
+      <p class="stat-big"><span id="statTotal">—</span> <span class="muted">записей</span></p>
+      <ul class="cat-stats" id="catStats"></ul>
+    </aside>
+
+    <section class="panel list-panel">
+      <div class="list-toolbar">
+        <h2>База данных</h2>
+        <div class="search-row">
+          <input type="search" id="dbSearch" placeholder="Поиск по названию, описанию, категории, ключу…" autocomplete="off" />
+          <select id="categoryFilter" aria-label="Категория">
+            <option value="all">Все категории</option>
+          </select>
+          <div class="export-actions">
+            <span class="export-label muted">Экспорт:</span>
+            <button type="button" class="btn-secondary" id="exportCsv" title="Скачать CSV (UTF-8, разделитель ;)">CSV</button>
+            <button type="button" class="btn-secondary" id="exportXlsx" title="Скачать Excel (.xlsx)">Excel</button>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Тип</th>
+              <th>Категория</th>
+              <th>Подписчики</th>
+              <th>Ключ поиска</th>
+              <th>Ссылка</th>
+              <th class="col-actions">Действия</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p class="muted footer-meta" id="tableMeta"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>RoadParcer</span>
+    <span class="site-footer-sep">·</span>
+    <span>Road Soft</span>
+  </footer>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
