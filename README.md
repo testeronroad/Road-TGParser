@@ -1,2 +1,64 @@
-# Road-Parcer
-Local web app to search and catalog public Telegram channels &amp; supergroups: SQLite DB, categories, CSV/XLSX export. By Road Soft. Локальный каталог публичных каналов и супергрупп Telegram: парсинг по ключевым словам, SQLite, веб-панель, экспорт CSV/Excel. Road Soft.
+# RoadParcer
+
+**Road Soft** · локальный каталог публичных **каналов и супергрупп Telegram**: поиск по ключевым словам, сохранение в **SQLite**, веб-интерфейс (поиск по базе, ручная смена категории, удаление записей), экспорт **CSV** и **Excel**. Стек: **Python 3.10+**, FastAPI, Telethon (MTProto).
+
+*English:* Local web app to search and catalog public Telegram channels and supergroups — SQLite, web UI, categories, CSV/XLSX export. **Python**, FastAPI, Telethon. **Road Soft.**
+
+**Строка для поля *Description* на GitHub** (Настройки репозитория → поле вверху, до ~350 символов):
+
+```text
+Local catalog of public Telegram channels & supergroups — Python, FastAPI, Telethon, SQLite, web UI, CSV/XLSX export. Road Soft.
+```
+
+**Темы (Topics), которые можно добавить на GitHub:** `telegram`, `telethon`, `fastapi`, `sqlite`, `python`, `uvicorn`, `roadparcer`, `channels`.
+
+---
+
+## Быстрый старт
+
+Полная пошаговая инструкция: **[INSTALL.md](INSTALL.md)**.
+
+Кратко:
+
+1. Установите **Python 3.10+**.
+2. Создайте виртуальное окружение и выполните `pip install -r requirements.txt`.
+3. Скопируйте `.env.example` в `.env`, укажите `API_ID` и `API_HASH` с [my.telegram.org/apps](https://my.telegram.org/apps).
+4. Запустите `python login_telegram.py` (один раз).
+5. Запустите сервер: `python -m uvicorn app.main:app --host 127.0.0.1 --port 8000`.
+6. Откройте в браузере: `http://127.0.0.1:8000`.
+
+Интерактивная документация API: `http://127.0.0.1:8000/docs`.
+
+---
+
+## Клонирование
+
+```bash
+git clone https://github.com/YOUR_USERNAME/roadparcer.git
+cd roadparcer
+python -m venv .venv
+# Windows PowerShell:
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+Дальше — по [INSTALL.md](INSTALL.md).
+
+---
+
+## Состав репозитория
+
+| Путь | Назначение |
+|------|------------|
+| `app/` | Backend (FastAPI), веб-интерфейс в `app/static/` |
+| `login_telegram.py` | Создание файла сессии Telegram |
+| `requirements.txt` | Зависимости Python |
+| `INSTALL.md` | Инструкция по запуску для пользователей |
+
+Файлы `.env`, папка `data/` и сессии Telegram в репозиторий не входят (см. `.gitignore`).
+
+---
+
+## Лицензия
+
+MIT, см. [LICENSE](LICENSE). Авторские права: **Road Soft**.
