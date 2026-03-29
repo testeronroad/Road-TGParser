@@ -22,7 +22,7 @@
 ## Клонирование
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/roadparcer.git
+git clone https://github.com/testeronroad/Road-TGParcer.git
 cd roadparcer
 python -m venv .venv
 # Windows PowerShell:
