@@ -1,6 +1,6 @@
-# Инструкция по запуску RoadParcer
+# Инструкция по запуску RoadParser
 
-**RoadParcer** — программа от **Road Soft** для локального каталога публичных каналов и супергрупп Telegram. Эта инструкция для пользователей, которые скачали проект архивом (**Code → Download ZIP** на GitHub) или получили копию файлов другим способом.
+**RoadParser** — программа от **Road Soft** для локального каталога публичных каналов и супергрупп Telegram. Эта инструкция для пользователей, которые скачали проект архивом (**Code → Download ZIP** на GitHub) или получили копию файлов другим способом.
 
 ---
 
@@ -17,11 +17,11 @@
 
 Распакуйте архив в удобную папку, например:
 
-`C:\Users\ВашеИмя\RoadParcer`
+`C:\Users\ВашеИмя\RoadParser`
 
 или
 
-`~/RoadParcer`
+`~/RoadParser`
 
 Внутри должны быть файлы `requirements.txt`, `login_telegram.py`, папка `app` и другие файлы из репозитория.
 
@@ -32,13 +32,13 @@
 **Windows (PowerShell):** Shift + ПКМ по папке → «Открыть окно PowerShell здесь» или откройте PowerShell и выполните:
 
 ```powershell
-cd C:\путь\к\RoadParcer
+cd C:\путь\к\RoadParser
 ```
 
 **macOS / Linux:**
 
 ```bash
-cd ~/RoadParcer
+cd ~/RoadParser
 ```
 
 ---
@@ -161,4 +161,4 @@ python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 
 ## Поддержка и автор
 
-Продукт **RoadParcer**, разработка **Road Soft**. Вопросы по использованию — через раздел Issues на GitHub репозитория проекта.
+Продукт **RoadParser**, разработка **Road Soft**. Вопросы по использованию — через раздел Issues на GitHub репозитория проекта.

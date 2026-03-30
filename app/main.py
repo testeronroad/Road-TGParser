@@ -26,7 +26,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="RoadParcer",
+    title="RoadParser",
     description="Каталог публичных каналов и супергрупп Telegram. Road Soft.",
     lifespan=lifespan,
 )
@@ -213,7 +213,7 @@ async def export_csv(
     finally:
         await conn.close()
     body = export_io.build_csv_bytes(rows)
-    name = f"roadparcer_{_export_stamp()}.csv"
+    name = f"roadparser_{_export_stamp()}.csv"
     return Response(
         content=body,
         media_type="text/csv; charset=utf-8",
@@ -234,7 +234,7 @@ async def export_xlsx(
     finally:
         await conn.close()
     body = export_io.build_xlsx_bytes(rows)
-    name = f"roadparcer_{_export_stamp()}.xlsx"
+    name = f"roadparser_{_export_stamp()}.xlsx"
     return Response(
         content=body,
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
