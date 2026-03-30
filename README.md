@@ -1,4 +1,4 @@
-# RoadParcer
+# RoadParser
 
 **Road Soft** · локальный каталог публичных **каналов и супергрупп Telegram**: поиск по ключевым словам, сохранение в **SQLite**, веб-интерфейс (поиск по базе, ручная смена категории, удаление записей), экспорт **CSV** и **Excel**. Стек: **Python 3.10+**, FastAPI, Telethon (MTProto).
 
@@ -22,8 +22,8 @@
 ## Клонирование
 
 ```bash
-git clone https://github.com/testeronroad/Road-TGParcer.git
-cd Road-TGParcer
+git clone https://github.com/testeronroad/Road-TGParser.git
+cd Road-TGParser
 python -m venv .venv
 # Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
